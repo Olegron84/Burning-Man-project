@@ -1,0 +1,290 @@
+body{
+    margin: 0;
+}
+html{
+    font-size: 20px;
+}
+h1,h2,h3,li{
+    font-family: "Anton";
+    text-transform: uppercase;
+}
+.wrapper{
+    box-sizing: border-box;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /*30*/
+}
+.header{
+    padding-top: 2.85rem;
+    height: 900px;
+    /*padding-bottom: 322px;*/
+    background-image: url("../img/bg_image.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_menu{
+    display: flex;
+    align-items: center;
+}
+.nav_list{
+    color: white;
+    list-style-type: none;
+    display: flex;
+    margin: 0 0 0 3.5rem;
+    padding: 0;
+}
+.list_elements{
+    margin-right: 2.05rem;
+    position: relative;
+    transition: color 0.4s ease 0s;
+    padding: 0.25rem 0;
+    font-size: 0.7rem;
+}
+.list_elements::after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: 0;
+	opacity: 0;
+	width: 0px;
+	height: 2px;
+	background-color: white;
+	transition: opacity 0.4s ease 0s,  width 0.4s ease 0s;
+}
+.list_elements:hover::after{
+    opacity: 1;
+	width: 100%;
+	background-color: yellow;
+}
+.list_elements:hover{
+    cursor: pointer;
+    color:yellow;
+}
+.nav_number{
+    font-family: "Anton";
+    color: white;
+    font-size: 0.85rem;
+}
+.burger{
+    width: 42px;
+    display: none;
+}
+.line{
+    display: block;
+    height:3px;
+    background: #fff;
+    margin-bottom: 11px;
+}
+.line:last-child{
+    margin: 0;
+}
+.header_body{
+    margin-top: 10.8rem;
+}
+.header_subtitle{
+    color: white;
+    letter-spacing: 0.1em;
+    font-size: 1.5rem;
+}
+.header_title{
+    font-size: 5rem;
+    color: white;
+    margin: 1.35rem 0 2.6rem 0;
+}
+.book_tickets_button{
+    display: block;
+    border: 1px solid white;
+    width: 190px;
+    padding: 0.9rem 1.15rem 0.85rem;
+    text-align: center;
+    font-family: "Anton";
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    transition: background-color 0.5s ease 0s, color 0.5s ease 0s;
+}
+.book_tickets_button:hover{
+    background-color: white;
+    color: black;
+}
+.content{
+    padding-top: 5.65rem;
+}
+.column_row{
+    display: flex;
+    margin: 0 -0.9rem;
+}
+.column{
+    flex: 0 0 564px;
+    padding: 0 0.9rem;
+}
+.column:first-child{
+    order: 0;
+}
+.column:last-child{
+      order: 1;  
+}
+
+.column_text{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 3.35rem;
+}
+.content_title{
+    font-size: 2.5rem;
+}
+.column_title{
+    font-size: 1.25rem;
+}
+div.column_info{
+    
+    text-align: justify;
+    font-size: 0.8rem;
+    font-family: Open Sans;
+    line-height: 26px;
+}
+.column_images{
+    order: 2;
+    display: flex;
+    margin: 0 -0.75rem;
+}
+.column_img{
+    padding: 0 0.75rem;
+}
+.footer{
+    margin-top: 5.7rem;
+    padding-bottom: 4rem;
+}
+.footer_content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer_text{
+    margin-right: 2.75rem;
+    font-family: "Open Sans";
+    font-size: 0.75rem;
+}
+.footer_text:last-child{
+    margin-right: 0;
+}
+@media screen and (max-width:1270px){
+    html{
+        font-size: 18px;
+    }
+    .wrapper{
+        margin: 0;
+    }
+    .header{
+        height: 600px;
+    }
+    .list_elements:hover{
+        color: white;
+    }
+    .list_elements::after{
+        display: none;
+    }
+    .header_body{
+        margin-top: 7.8rem;
+    }
+    .content {
+        padding-top: 4.65rem;
+    }
+    .column_row{
+        flex-direction: column;
+    }
+    .column{
+        flex: 0 1 auto;
+        margin-bottom: 0.85rem;
+    }
+    .column_text{
+        margin-bottom: 0;
+    }
+    .column_images{
+        order: 2;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .column_img:nth-child(3){
+        display: none;
+    }
+    .book_tickets_button:hover{
+        color: white;
+        background-color: transparent;
+    }
+    .footer{
+        margin-top: 4.7rem;
+        padding-bottom: 3rem;
+    }
+}
+@media screen and (max-width:1024px){
+    html{
+        font-size: 16px;
+    }
+    .header{
+        height: 500px;
+    }
+    .header_body {
+        margin-top: 6.8rem;
+    }
+    .content {
+        padding-top: 3.65rem;
+    }
+    .footer{
+        margin-top: 3.7rem;
+        padding-bottom: 2rem;
+    }
+}
+@media screen and (max-width:768px){
+    html{
+        font-size: 14px;
+    }
+    .nav_list, .nav_number{
+        display: none;
+    }
+    .burger{
+        display: block;
+    }
+    .content {
+        padding-top: 2.65rem;
+    }
+    .footer {
+        margin-top: 2.7rem;
+        padding-bottom: 1rem;
+    }
+    .header_body {
+        margin-top: 5.8rem;
+    }
+}
+@media screen and (max-width:603px){
+    html{
+        font-size: 12px;
+    }
+    .header{
+        height: 400px;
+    }
+    .header_body {
+        margin-top: 3.8rem;
+    }
+    .content {
+        padding-top: 1.65rem;
+    }
+    .column_img:nth-child(2){
+        display: none;
+    }
+    .footer {
+        margin-top: 1.7rem;
+        padding-bottom: 0;
+    }
+    .footer_content{
+        flex-direction: column;
+    }
+}
